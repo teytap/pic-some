@@ -1,6 +1,11 @@
 import { Outlet, Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Context } from "../../Context";
 
 const Layout = () => {
+  const { cartItems } = useContext(Context);
+  const cartClassName =
+    cartItems.length > 0 ? "ri-shopping-cart-fill" : "ri-shopping-cart-line";
   return (
     <>
       <nav>
@@ -15,7 +20,7 @@ const Layout = () => {
           </li>
           <li>
             <Link to="/cart">
-              <div className="nav-cart">Cart</div>
+              <i className={`${cartClassName} ri-fw ri-2x nav-cart`}></i>
             </Link>
           </li>
         </ul>

@@ -53,7 +53,7 @@ function Image({ className, img }) {
       );
     }
   }
-  console.log(cartItems);
+
   return (
     <div
       className={`${className} image-container`}
