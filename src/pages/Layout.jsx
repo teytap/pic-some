@@ -6,10 +6,17 @@ const Layout = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/">Pic-Some</Link>
+            <Link to="/">
+              <div className="logo-and-name">
+                <img src="/public/foto.png" width="70" />
+                <div className="picsome">PicSome</div>
+              </div>
+            </Link>
           </li>
           <li>
-            <Link to="/cart">Cart</Link>
+            <Link to="/cart">
+              <div className="nav-cart">Cart</div>
+            </Link>
           </li>
         </ul>
       </nav>
