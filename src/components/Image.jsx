@@ -6,7 +6,7 @@ function Image({ className, img }) {
   const [hovered, setHovered] = useState(false);
   const { toggleFavorite, addToCart, cartItems, removeFromCart } =
     useContext(Context);
-
+  //--- hovered images and showing icons and changes---
   const heartIcon = hovered && (
     <i
       className="ri-heart-line favorite"
@@ -19,17 +19,8 @@ function Image({ className, img }) {
       onClick={() => toggleFavorite(img.id)}
     ></i>
   );
-  // const cartIcon = hovered && (
-  //   <i
-  //     className="ri-add-circle-line cart"
-  //     onClick={() => addToCart(img.id)}
-  //   ></i>
-  // );
+
   const addedIcon = cartItems.some((item) => item.id === img.id) && (
-    // <i
-    //   className="ri-add-circle-line cart"
-    //   onClick={() => addToCart(img.id)}
-    // ></i>
     <i
       className="ri-shopping-cart-fill cart"
       onClick={() => addToCart(img.id)}
